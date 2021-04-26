@@ -1,13 +1,13 @@
-# CJIS Tables .Net SDK
+# CJIS Tables SDK
 
-This repository provides guidance for .Net clients of the
+This repository provides client API guidance for the
 [CJIS Tables API](https://docs.codes.lacounty-isab.org).
 
 ## Contents
 
-* [keys](keys) – Sample generated keys
-* [dotnet](dotnet) – .Net client
-* [nodejs](nodejs) – Node.js client
+* [.Net Client](dotnet)
+* [Node.js Client](nodejs)
+* [Sample Keys](keys)
 
 ## Official Documentation
 

@@ -7,7 +7,9 @@ This [Node.js](https://nodejs.org/en/) client is configured in the usual way.
 
 This installs the
 [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
-NPM package.
+and
+[axios](https://www.npmjs.com/package/axios)
+NPM packages.
 
 ## Samples
 
