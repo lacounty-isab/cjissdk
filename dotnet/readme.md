@@ -21,6 +21,7 @@ this SDK.
 To generate a JWT execute the following steps:
 
 <ol>
+ <li>Open the C# solution and Build the solution first.</li>
  <li>Navigate to the folder path:
       ..\userPath\cjissdk\dotnet\dotnetClient\dotnetClient\bin\Debug\netcoreapp3.1
  </li>
@@ -32,6 +33,7 @@ To generate a JWT execute the following steps:
 This is a simple console application that creates a request that calls the api client to retrieve a single charge code.
 
 <ol>
+   <li>Open the C# solution and Build the solution first. If you have not already done so.</li>
 	<li> Populate the APIKEY environment variable with a valid API key.</li>
 	<li> Execute the dotnetClient.exe and chose option 2.</li>
 </ol>
