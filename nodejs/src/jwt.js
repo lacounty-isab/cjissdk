@@ -9,7 +9,7 @@ const privKeyPath = path.join(__dirname, '..', '..', 'keys', 'cjissdk-key.pem');
 //---------- RSA Signature --------------------------
 
 const payload = {
-  scopes: ['da', 'lasd'],
+  scope: ['da', 'lasd'],
   user: 'e123123'
 }
 
@@ -21,21 +21,20 @@ const rsaOptions = {
   issuer: 'myidp',
 };
 
-console.time('jwt');
-console.timeLog('jwt', `About to sign JWT with private key from ${privKeyPath}.`);
+console.log(`About to sign JWT with private key from ${privKeyPath}.`);
 const rsaToken = jwt.sign(payload, privKey, rsaOptions);
 
-console.timeLog('jwt', `Signed RSA rsaToken length: ${rsaToken.length}`);
+console.log(`Signed RSA rsaToken length: ${rsaToken.length}`);
 console.log(rsaToken);
 console.log();
 
-console.timeLog('jwt', `About to verify JWT with public key from ${pubKeyPath}.`);
+console.log(`About to verify JWT with public key from ${pubKeyPath}.`);
 const pubKey = fs.readFileSync(pubKeyPath);
 let verifyOptions = {
   algorithms: ['RS256'],
 }
 let decoded = jwt.verify(rsaToken, pubKey, verifyOptions);
-console.timeLog('jwt', `Decoded: ${JSON.stringify(decoded, null, 2)}`);
+console.log(`Decoded: ${JSON.stringify(decoded, null, 2)}`);
 console.log()
 
 //-------- HMAC Signature -----------------------
@@ -47,16 +46,12 @@ const hmOptions = {
 }
 
 const hmacKey = fs.readFileSync(hmacKeyPath);
-console.timeLog('jwt', `About to sign JWT with HMAC key from ${hmacKeyPath}`)
+console.log(`About to sign JWT with HMAC key from ${hmacKeyPath}`)
 const hmacToken = jwt.sign(payload, hmacKey, hmOptions);
 
-console.timeLog('jwt', `Signed HMAC rsaToken length: ${hmacToken.length}`);
+console.log(`Signed HMAC rsaToken length: ${hmacToken.length}`);
 console.log(hmacToken);
 console.log();
 
 decode = jwt.verify(hmacToken, hmacKey, hmOptions);
-console.timeLog('jwt', `Decoded ${JSON.stringify(decoded, null, 2)}`);
-
-console.timeEnd('jwt');
-
-module.exports = {rsaToken, hmacToken }
+console.log(`Decoded ${JSON.stringify(decoded, null, 2)}`);

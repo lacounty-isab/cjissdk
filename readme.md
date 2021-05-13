@@ -3,29 +3,29 @@
 This repository provides client API guidance for the
 [CJIS Tables API](https://docs.codes.lacounty-isab.org).
 
-## Contents
+## Repository Contents
 
 * [.Net Client](dotnet)
 * [Node.js Client](nodejs)
 * [Sample Keys](keys)
 
-## Official Documentation
+## API Documentation
 
 The OpenAPI 3.0 specification for **CJIS Tables** resides at
 
 https://docs.codes.lacounty-isab.org
 
-<img alt="CJIS Documentation Page" src="img/cjisdocs.png" width="500">
+<img alt="CJIS Documentation Page" src="img/cjisdocs.png" width="600">
 
-Click the **Docs** link for general guidance.  This guide
-*supplements* the official documentation with .Net-specific
+Click the **Docs** link for general guidance.
+
+This guide
+*supplements* the official documentation with specific
 examples.  It's not a standalone substitute for reading the
 API documenation.
 
-## This Documentation
-
-The page covers SDK details that pertain to all the platforms.
-After you read this section, navigate to the directory for your
+The sections below cover SDK details that pertain to all platforms.
+After you review this section, navigate to the directory for your
 platform.  It will contain instructions specific to the runtime.
 
 ## Prerequisites
@@ -46,11 +46,11 @@ set APIKEY=<your api key here>
 ## Key Generation
 
 See the [Key Generation Section](keys/readme.md) for the available
-sample keys and how to generate your own keys.  If you do opt to
-generate your own keys (recommended), be sure to update the filenames
-used by the sample code for your platform.
-Filenames used by the sample code are defined near the top of each
-file so they may be easily modified.
+sample keys and how to generate your own keys.  
+The samples keys are provided only to show you what typical values
+look like. Do not use them for your own applications.
+
+Ideally, the key values are provided through environment variables.
 
 ## JWT Generation
 

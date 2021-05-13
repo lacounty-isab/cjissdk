@@ -18,14 +18,17 @@ this SDK.
 
 ### 1. JWT
 
-Generate a JWT by running `jwt.js`.
+This program generates JWTs from the keys in the
+[keys](../../keys) directory.  This program has no other
+dependencies.  It can be run from the `nodejs/src` direcory.
 
 ```
 node jwt
 ```
 
-By default it will use the keys in [keys](../../keys).
-This does **not** invoke an API.
+This does **not** invoke an API. It just generates and prints
+encoded JWTs.  Notice how much larger the RSA signature is than
+the HMAC signature.
 
 ### 2. Retrieve a Charge
 
@@ -35,16 +38,35 @@ a single charge code.
 1. Populate `APIKEY` environment variable with a valid API key
    as explained in the [general prerequisites](../readme.md).
 
-2. Run `getCharge.js`.
+2. Change to the `nodejs/src` directory.
+
+3. Run `getCharge.js`.
    ```
    node getCharge
    ```
 
-   By default, this runs against the TEST environment.  You may alter
+   By default, this invokes the TEST environment.  You may alter
    the `hostname` option in the code to point elsewhere.
 
 ### 3. System to System
 
 The system-to-system sample only works if the target environment is
-configured to allow the `myidp` issuer.  Otherwise this returns a
+configured to allow the `workshop` issuer.  Otherwise this returns a
 `401` HTTP status code.
+
+1. Populate the `APIKEY` environment variable.
+
+2. Populate the `CJISIDP_SECRET` environment variable.
+
+3. Change to the `nodejs/src` directory.
+
+4. Run `updateCharge.js`:
+
+   ```
+   node updateCharge
+   ```
+
+A successful run should return
+```
+update: 333.456ms Response = {"changedRows":1}
+```
