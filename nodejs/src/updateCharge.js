@@ -12,7 +12,7 @@ if (apikey) {
   process.exit(1);
 }
 
-const hmacSecret = process.env['CJISIDP_SECRET'];
+const hmacSecret = process.env['CJISSDK_SECRET'];
 if (hmacSecret) {
   console.log(`Read HMAC secret from ${ENV_SECRET} environment variable`);
 } else {

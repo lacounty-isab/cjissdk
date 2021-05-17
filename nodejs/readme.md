@@ -56,7 +56,7 @@ configured to allow the `workshop` issuer.  Otherwise this returns a
 
 1. Populate the `APIKEY` environment variable.
 
-2. Populate the `CJISIDP_SECRET` environment variable.
+2. Populate the `CJISSDK_SECRET` environment variable.
 
 3. Change to the `nodejs/src` directory.
 
